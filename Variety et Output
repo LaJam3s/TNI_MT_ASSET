@@ -1,0 +1,17 @@
+//For full instruction view PDF in MTE-110
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int respect = 1000, supply = 30, manpower = 1000;
+		float HP = 33.25f, ST = 1.2f;
+		string name = "Valinkorn", nickname = "LaJames", ID = "24";
+		char sex = 'M', member = 'Y'; // char (STRING) = '(SINGLE CHAR)' used for single variety.
+		Console.WriteLine("Respect {0:N} \nSupply {1} \nManpower {2}", respect,supply,manpower); //if ":N" number will get spareted with coma et .00
+		Console.WriteLine("HP {0}\nST {1:0}", HP,ST); //if ":0" num will be added up & if ":F" number will always end in .00 or full series number.
+		Console.WriteLine("name {0} \nNickname {1} \nID {2}", name,nickname,ID);
+		Console.WriteLine("sex {0} \nMember {1}", sex,member);
+	}
+}
