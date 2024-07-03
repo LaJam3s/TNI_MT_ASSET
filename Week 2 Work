@@ -1,0 +1,129 @@
+// Sample 1
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string name = "Valinkorn", BD = "21/05/2006";
+		int âge = 18;
+		float GPA = 3.00f;
+		Console.WriteLine("Name {0} \nâge {1} BD {2}", name,âge,BD);
+		Console.WriteLine("GPA {0:F}", GPA);
+	}
+}
+
+// Sample 2
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		const float PI = 3.14f;
+		string name = "Puwadol";
+		float GPA = 3.00f;
+		Console.WriteLine("My name is {0}",name);
+        Console.WriteLine("GPA {0}",GPA);
+		Console.WriteLine("PI {0}" ,PI);
+	}
+}
+
+// Calculation of plus and total numbers
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		float total = (35f + 36f + 389f + 39f + 40f) / 5;
+		Console.WriteLine("{0:0}",total);
+		Console.Writeline("{0:f}",total);
+	}
+}
+
+//Data below uses full number
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		float coffee = 30, milk = 15, water = 10;
+		float total = coffee + milk + water;
+		
+		float dis = total * 5 / 100 ;
+		Console.WriteLine(total)
+		Console.WriteLine(total - dis);
+	}
+}
+
+// Data type below show number with DIX points 
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int  coffee = 30, milk = 15, water = 10;
+		int total = coffee + milk + water;
+		
+		int dis = total * 5 / 100 ;
+		Console.WriteLine(total);
+		Console.WriteLine(total - dis);
+	}
+}
+
+// Showing the calculation process
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int  coffee = 30, milk = 15, water = 10;
+		int total = coffee + milk + water;
+		
+
+		int dis = total * 5 / 100 ;
+		Console.WriteLine("================================");
+        Console.WriteLine("{0,27}","Jean-Charles Café");
+		Console.WriteLine("================================");
+        Console.WriteLine("Coffee {0,12:F} {1,14}", coffee,"THB.");
+        Console.WriteLine("Milk {0,14:F} {1,14}", milk,"THB.");
+        Console.WriteLine("Water {0,13:F} {1,14}", water,"THB.");
+        Console.WriteLine("================================");
+		Console.WriteLine("Total {0,13:F} {1,14}", total,"THB.");
+		Console.WriteLine("Dis {0,15:F} {1,14}", total - dis,"THB.");
+	}
+}
+
+// Total Manage
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string n1 = "Pen", n2 = "Pencil", n3 = "Book";
+		double p1 = 13.5f, p2 = 200.10f, p3 = 1020;
+		int s1 = 100, s2 = 50, s3 = 101;
+
+		Console.WriteLine("================================");
+        Console.WriteLine("ITEM         STOCK       PRICE");
+		Console.WriteLine("================================");
+        Console.WriteLine("{0}           {1}        {2:F}", n1,s1,p1);
+        Console.WriteLine("{0}        {1}        {2:F}", n2,s2,p2);
+        Console.WriteLine("{0}          {1}      {2:F}", n3,s3,p3);
+		Console.WriteLine("================================");
+	    double  T1 = p1 + p2 + p3;
+		int T2 = s1 + s2 + s3;
+		Console.WriteLine("Total         {0}      {1:F}", T2,T1);
+	}
+}
