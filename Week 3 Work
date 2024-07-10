@@ -55,9 +55,61 @@ public class Program
 	public static void Main()
 	{
 		Console.WriteLine("Please provide your idendification :");
-		int a = int.Parse(Console.ReadLine());
+		int a = int.Parse(Console.ReadLine()); //This line is compiled with string, view above for clue
 		
 		Console.WriteLine("Number is, {0}", a + 5);
+		
+	}
+}	
+
+//Prases
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		int a = int.Parse(Console.ReadLine());
+		float b = float.Parse(Console.ReadLine());
+		char c  = char.Parse(Console.ReadLine());
+		string d = Console.ReadLine();
+		
+	}
+}	
+
+// Calandar converting code
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		Console.Write("Input the BE : ");
+		int BE = int.Parse(Console.ReadLine());
+		int AD = BE - 543;
+		Console.WriteLine("BE is {0} AD is {1}",BE, AD);
+		
+	}
+}	
+
+// Currency Converter
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		// Currency converting cal.
+		Console.Write("Input the EUR amount: ");
+		float EUR = float.Parse(Console.ReadLine());
+		float THB = EUR * 39.4f;
+		
+		Console.WriteLine("EUR is {0:N} THB is {1:N}",EUR, THB);
 		
 	}
 }	
