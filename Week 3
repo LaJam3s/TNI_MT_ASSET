@@ -1,0 +1,63 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Please provide you idendification username :"); //Line displaying above readline.
+		string name = Console.ReadLine(); 
+		
+		Console.WriteLine("Your name is {0} \Welcome!", name); //Line displaying after input from readline.
+		
+	}
+}
+
+// Converting string id to int number and plus
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Please provide you idendification username :");
+		string name = Console.ReadLine();
+		int a = Convert.ToInt16(name);
+		
+		Console.WriteLine("Hello Officer, {0}", a + 5);
+		
+	}
+}	
+
+// Parse convert string to non-string, ToInt10-32 converts non-string into string
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Please provide your idendification :");
+		string name = Console.ReadLine();
+		int a = int.Parse(name);
+		
+		Console.WriteLine("Number is, {0}", a + 5);
+		
+	}
+}	
+
+//Compiling function from 2 lines into 1 line
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Please provide your idendification :");
+		int a = int.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Number is, {0}", a + 5);
+		
+	}
+}	
