@@ -1,0 +1,119 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		float num1,num2,num3,total;
+		Console.WriteLine("********************************************");
+		Console.Write("Number 1 = ");
+		num1 = float.Parse(Console.ReadLine());
+		Console.Write("Number 2 = ");
+		num2 = float.Parse(Console.ReadLine());
+		Console.Write("Number 3 = ");
+		num3 = float.Parse(Console.ReadLine());
+		Console.WriteLine("********************************************");
+		total = num1 + num2 + num3;
+		Console.WriteLine("Summary of {0}, {1} et {2} est {3}",num1,num2,num3,total);
+		Console.WriteLine("********************************************");
+		Console.WriteLine("Average of {0} / 3 is {1:F}",total,total/3);
+
+ // This code uses average dividing 3 and plusing
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		float salary, social, tax;
+		Console.WriteLine("------------------------------------------------------------------");
+		Console.Write("Input employee salary : ");
+		salary = float.Parse(Console.ReadLine());
+		Console.WriteLine("\n------------------------------------------------------------------");
+		Console.WriteLine("Employee salary {0,20:N} Baht ",salary);
+		social = salary * 3f / 100f;
+		tax = salary * 4f / 100f;
+		Console.WriteLine("Social {0,36:N} Baht\nTax {1,40:N} Baht",social,tax);
+		Console.WriteLine("------------------------------------------------------------------");
+		Console.WriteLine("Salary {0,35:N} Baht",salary - social - tax);
+		// They want to tax you!!!
+	}
+}
+
+// Calculation
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+        int x = 19 - 4 * 2 + 7;
+ 	   Console.WriteLine("x = {0}\n", x);
+	}
+}
+
+// fucking hell
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string n1 = "Coffee", n2 = "Milk", n3 = "Water";
+		float p1 = 30f, p2 = 15f, p3 = 10f;
+		
+	    Console.WriteLine("------------------------------------------------------------------");
+		Console.WriteLine("{0:60}","Bill Coffee Shop");
+		Console.WriteLine("------------------------------------------------------------------");
+		Console.WriteLine("{0} {1} Baht, {2} {3} Baht, {4} {5} Baht", n1, p1, n2, p2, n3, p3);
+		Console.WriteLine("------------------------------------------------------------------");
+		
+		Console.Write("How many Coffee do you want? : ");
+		float a1 = float.Parse(Console.ReadLine());
+		Console.Write("How many Milk do you want?     : ");
+		float a2 = float.Parse(Console.ReadLine());
+		Console.Write("How many Water do you want?  : ");
+		float a3 = float.Parse(Console.ReadLine());
+		Console.WriteLine("\n------------------------------------------------------------------");
+		Console.WriteLine("Coffee {0,11} {1,9:N} Baht \nMilk {2,14}  {3,9:N} Baht \nWater {4,11}  {5,10:N} Baht", n1, p1, n2, p2, n3, p3);
+		Console.WriteLine("\n------------------------------------------------------------------");
+		Console.WriteLine("Total {0,11} {1,9:N}Baht", a1 + a2 + a3, p1 * a1 + p2 * a2 + p3 * a3);
+		float s1 = p1 * a1 + p2 * a2 + p3 * a3;
+		Console.WriteLine("Total+VAT7% {0,11:N} Baht", s1 * 7f / 100f + s1);
+	}
+}
+
+// Descaling profil
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Enter Money you wish to convert");
+		int money = int.Parse(Console.ReadLine());
+		Console.WriteLine("Convert to ......");
+		
+		int B1000 = money / 1000;
+		int B500 = money % 1000 / 500;
+		int B100 = money % 1000 % 500 / 100;
+		int B50 = money % 1000 % 500 % 100 / 50;
+		int B20 = money % 1000 % 500 % 100 % 50 / 20;
+		int B10 = money % 1000 % 500 % 100 % 50 % 20 / 10;
+		int B5 = money % 1000 % 500 % 100 % 50 % 20 % 10 / 5;
+		int B1 = money % 1000 % 500 % 100 % 50 % 20 % 10 % 5 / 1;
+		
+		Console.WriteLine("One Thousand Baht Coin : {0}",B1000);
+		Console.WriteLine("Five Hundred Baht Coin : {0}",B500);
+		Console.WriteLine("One Hundred Baht Coin : {0}",B100);
+		Console.WriteLine("Fifthy Baht Coin : {0}",B50);
+		Console.WriteLine("Twenty Baht Coin : {0}",B20);
+		Console.WriteLine("Ten Baht Coin : {0}",B10);
+		Console.WriteLine("Five Baht Coin : {0}",B5);
+		Console.WriteLine("One Baht Coin : {0}",B1);
+		
+		Console.WriteLine("Press any key to continue ...")
+	}
+}
