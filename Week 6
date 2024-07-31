@@ -1,0 +1,169 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.Write("Input your birth year : ");
+		int year = int.Parse(Console.ReadLine());
+		int age = (System.DateTime.Now.Year + 543) - year;
+		
+		Console.WriteLine("Your age = {0}", age);
+		
+		if (age >=18)
+			Console.Write("You can vote!");
+		else
+			Console.Write("You can't vote!");
+	}
+}
+
+////////////////////////////////
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.Write("Input number 1 : ");
+		int n1 = int.Parse(Console.ReadLine());
+		Console.Write("Input number 2 : ");
+		int n2 = int.Parse(Console.ReadLine());
+		Console.WriteLine("===========================================");
+		if(n1 > n2)
+		Console.WriteLine("Number 1 ({0}) is more than Number 2 ({1})", n1, n2);
+		else if(n1 < n2)
+		Console.WriteLine("Number 1 ({0}) is less than Number 2 ({1})", n1, n2);
+		else
+		Console.WriteLine("Number 1 ({0}) is  equal to Number 2 ({1})", n1, n2);
+		Console.WriteLine("===========================================");
+	}
+}
+
+///////////////////
+
+using System;
+
+namespace SelectionPractice8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Step 1: Input the total price
+            Console.Write("Input total price: ");
+            double totalPrice = Convert.ToDouble(Console.ReadLine());
+
+            // Step 2: Ask if the user has a coupon
+            Console.Write("Do you have coupon [y/n]: ");
+            string hasCoupon = Console.ReadLine();
+
+            double discount = 0.0;
+            double netPrice = totalPrice;
+
+            // Step 3: Apply discounts based on the user's input
+            if (hasCoupon.ToLower() == "y")
+            {
+                Console.Write("How many discount (%): ");
+                double couponDiscount = Convert.ToDouble(Console.ReadLine());
+                discount = totalPrice * (couponDiscount / 100);
+                netPrice = totalPrice - discount;
+
+                Console.WriteLine($"Discount from coupon ({couponDiscount}%): {discount:F2} Baht.");
+            }
+            else
+            {
+                // Check if total price qualifies for the promotion
+                if (totalPrice >= 2000)
+                {
+                    discount = totalPrice * 0.10; // 10% discount
+                    netPrice = totalPrice - discount;
+
+                    Console.WriteLine($"Discount from promotion: {discount:F2} Baht.");
+                }
+            }
+
+            // Step 4: Display the net price
+            Console.WriteLine($"Net Price = {netPrice:F2} Baht.");
+        }
+    }
+}
+
+//////////////////////////////////
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("===========================================");
+		Console.WriteLine("{0, 38}","Menu");
+		Console.WriteLine("===========================================");
+	 	Console.WriteLine("Press c or C : Find Area of Circle");
+	    Console.WriteLine("{Press s or S : Find Area of Square");
+	    Console.WriteLine("===========================================");
+	    Console.WriteLine("Input your choice : ");
+	    char choice = char.Parse(Console.ReadLine());
+		
+	    if(choice == 'c' || choice == 'C'){
+	    	Console.WriteLine("Your choose \"Circle\" ");
+	    	Console.Write("Input radius : " );
+		    float r = float.Parse(Console.ReadLine());
+		    float ans = (float)(System.Math.PI * System.Math.Pow(r,2));
+		    Console.WriteLine("===========================================");
+	        Console.WriteLine("Area = {0:F}", ans);
+	     	Console.WriteLine("===========================================");
+		}
+		
+		if(choice == 's' || choice == 'S'){
+	    	Console.WriteLine("Your choose \"Square\" ");
+	    	Console.Write("Input Width : " );
+		    float w = float.Parse(Console.ReadLine());
+			Console.Write("Input Height : " );
+		    float h = float.Parse(Console.ReadLine());
+			float ans = w * h;
+		    Console.WriteLine("===========================================");
+	        Console.WriteLine("Area = {0:F}", ans);
+	     	Console.WriteLine("===========================================");
+		}
+		
+		
+		
+	}
+}
+
+//////////////////////////////////////////////
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.Write("Input total price :");
+		float price = float.Parse(Console.ReadLine());
+		Console.Write("Do you have coupon [y,N/n,N] :");
+		char coupon = char.Parse(Console.ReadLine());
+		Console.WriteLine("---------------------------------------------------------------");
+		
+		if(coupon == 'y' || coupon == 'Y'){
+			Console.Write("How many discount (%)");
+			int per = int.Parse(Console.ReadLine());
+			float discount = price * per / 100f;
+			Console.WriteLine("Discount from coupon ({0:N}%) = {1} Baht.", per, discount);
+			Console.WriteLine("Net Price {0:N} Baht.", price - discount);
+		}
+		
+		else if(coupon == 'n' || coupon == 'N'){
+			if (price >= 2000){
+			float pro1 = price - (price - (price * 10 /100));
+			Console.WriteLine("Discount from promotion = {0}", pro1);
+			Console.WriteLine("Net Price {0:N} Baht.", price - pro1);
+			}
+							else if (price <= 1999){
+				Console.WriteLine("Net Price {0:N}", price);
+			}
+		}
+	}
+}
