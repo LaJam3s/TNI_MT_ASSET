@@ -1,0 +1,190 @@
+using System;
+
+public class Program
+{
+  public static void Main()
+  {
+    int x = 0; //Loop Intiate
+    while(x < 10){ //Count to
+      x++; //Check loop
+      Console.WriteLine("'{0}', '{1}'",x,"Valinkorn"); //{0},{1} made for tagging 
+    }
+    Console.WriteLine("Loop is Done");
+  }
+}
+
+//
+
+using System;
+
+public class Program
+{
+  public static void Main()
+  {
+	  Console.Write("Inpu tname :");
+	  string name = Console.ReadLine();
+	  
+    int x = 0; //Loop Intiate
+    while(x < 5){ //Count to
+      x++; //Check loop
+      Console.WriteLine("'{0}', '{1}'",x,"Valinkorn"); //{0},{1} made for tagging 
+    }
+    Console.WriteLine("Loop is Done");
+  }
+}
+
+//
+
+using System;
+
+public class Program
+{
+  public static void Main()
+  {
+	  
+    int x = 0; //Loop Intiate
+    while(x < 5){ //Count to 5
+      x++; //Check loop
+      Console.WriteLine("'{0}', '{1}'",x,"Valinkorn"); //{0},{1} made for tagging 
+	  Console.Write("Inpu tname :");
+	  string name = Console.ReadLine(); //making it so asks 5 times
+    }
+    Console.WriteLine("Loop is Done");
+  }
+}
+
+//
+
+using System; //This one is like Calculator
+
+public class Program
+{
+  public static void Main()
+  {
+	  
+    int total = 0;
+    int x = 0; //Loop Intiate
+    while(x < 5){ //Count to
+      x++; //Check loop
+      Console.Write("Inpu tname :");
+      int num = int.Parse(Console.ReadLine());
+	  total += num;
+		
+    }
+    Console.WriteLine("Total = {0}", total);
+  }
+}
+
+//
+
+
+
+static void Main(string[] args)
+{
+    int num = 0;
+    int max = 0;
+    int x = 0;
+    while (x < 5)
+    {
+        x++;
+        num = int.Parse(Console.ReadLine());
+        if (num > max)
+        {
+            max = num;
+        }
+    }
+    Console.Write("Max number: {0}\n", max);
+    Console.ReadKey();
+}
+//finding max num
+
+//
+
+
+using System;
+
+public class Program
+{
+  public static void Main()
+  {
+    int num = 0;
+    int min = 999999;
+    int x = 0;
+    while (x < 8)
+    {
+        x++;
+        num = int.Parse(Console.ReadLine());
+        if (num < min)
+        {
+            min = num;
+        }
+    }
+    Console.Write("Min number: {0}\n", min);
+  }
+}
+
+//finding min num
+
+
+
+
+
+//
+
+public static void Main()
+{
+    Random rnd = new Random();
+    int i = 1;
+
+    Console.WriteLine("Q1");
+    Console.WriteLine("Q2");
+    int menu = int.Parse(Console.ReadLine());
+    while (i <= menu)
+    {
+        i++;
+        int random = rnd.Next(1, 11);
+        Console.Write(random + " ");
+        if (random == 1) Console.WriteLine("A);
+        else if (random == 2) Console.WriteLine("B");
+        else if (random == 3) Console.WriteLine("C");
+        else if (random == 4) Console.WriteLine("D");
+        else if (random == 5) Console.WriteLine("E");
+        else if (random == 6) Console.WriteLine("F");
+        else if (random == 7) Console.WriteLine("G");
+        else if (random == 8) Console.WriteLine("H");
+        else if (random == 9) Console.WriteLine("I");
+        else Console.WriteLine("J");
+    }
+}
+
+//
+
+using System;
+
+public class Program
+{
+  public static void Main()
+  {
+	  Random r = new Random();
+	  Console.Write("Would you like to try searching the cellar for LP? : ");
+	  int num = int.Parse(Console.ReadLine());
+	  
+	  int x = 0;
+	  while(x < num){
+		  x++;
+		  int random = r.Next(1,10); //num de la chance
+		  Console.Write(random);
+		  if(random >= 1 && random <=8)
+			  Console.WriteLine("Lol, you found nothing.");
+		  else if(random == 9) // Valinkorn Chaobankoh 2413211596
+			  Console.WriteLine("You found The Beatles LP, wow!!");
+		  else if(random == 10)
+			  Console.WriteLine("You found Elvis Presley LP! HELL YEA!");
+	  }
+   }
+}
+
+
+
+
+// shorten version
