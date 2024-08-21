@@ -1,0 +1,111 @@
+int num;
+do
+{
+    Console.Write("Input Your Number : ");
+    num = int.Parse(Console.ReadLine());
+
+}
+while ( num < 0 );
+
+int x = 0;
+while (x < 12) 
+{
+       x ++;
+    Console.WriteLine("{0} x {1} = {2}", num, x, num * x);
+}
+Console.ReadKey();
+
+//
+
+
+
+Console.Write("Input your Numer : ");
+int num = int.Parse(Console.ReadLine());
+
+if (num % 2 == 0)
+{
+    int x = 0;
+    while(x < 12)
+    {
+        x++; 
+        Console.WriteLine("{0} x {1} = {2}", num, x, num *x);
+    }
+}
+else
+{
+    int y = 0;
+    while (y < num)
+    {
+        y++;
+        Console.WriteLine("I Love C#");
+    
+    }
+}
+    Console.ReadKey();
+
+//
+
+float tem;
+char sys, sky;
+Console.Write("Entre la temperature : ");
+tem = float.Parse(Console.ReadLine());
+
+do
+{
+    Console.Write("All system go (Y/N)");
+    sys = char.Parse(Console.ReadLine());
+
+}
+while (sys != 'Y' && sys != 'N');
+do
+{
+    Console.Write("Weather confirmation (P, C, R, T)");
+    sky = char.Parse(Console.ReadLine());
+
+}
+while (sky != 'P' && sky != 'C' && sky != 'R' && sky != 'T');
+
+if
+
+    (tem >= 60 && tem <= 90 && sys != 'Y' && (sky != 'P' && sky != 'C'))
+    Console.WriteLine("\nLAUNCH NOW!!");
+
+else
+    Console.WriteLine("\nDO NOT LAUNCH NOW!!");
+
+//
+int stu ;
+float score, sum = 0, max = 0, min = 0;
+Console.WriteLine("=================================");
+
+do
+{
+    Console.Write("How Many Students in the class : ");
+     stu = int.Parse(Console.ReadLine());
+}
+while (stu < 1);
+
+Console.WriteLine("=================================");
+
+int x = 0;
+while (x < stu)
+{
+    Console.Write("Input score of student {0} : ", x+1);
+    score = float.Parse(Console.ReadLine());
+    if (score >= 0 && score <= 100)
+    {
+        x++;
+        sum += score;
+        if(score > max)
+            max = score;
+        if (score < max)
+            min = score;
+    }
+}
+
+Console.WriteLine("=================================");
+Console.WriteLine("Average score = {0:F}", sum / x);
+Console.WriteLine("Maximum score = {0:F}", max);
+Console.WriteLine("Minimum score = {0:F}", min);
+Console.ReadKey();
+
