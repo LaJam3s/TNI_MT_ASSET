@@ -74,8 +74,10 @@ else
     Console.WriteLine("\nDO NOT LAUNCH NOW!!");
 
 //
+using System;
+
 int stu ;
-float score, sum = 0, max = 0, min = 0;
+float score, sum = 0, max = 0, min = 100;
 Console.WriteLine("=================================");
 
 do
@@ -96,16 +98,17 @@ while (x < stu)
     {
         x++;
         sum += score;
-        if(score > max)
+        if (score > max)
             max = score;
-        if (score < max)
+        if (score < min)
             min = score;
+        
     }
+ 
 }
 
 Console.WriteLine("=================================");
 Console.WriteLine("Average score = {0:F}", sum / x);
 Console.WriteLine("Maximum score = {0:F}", max);
-Console.WriteLine("Minimum score = {0:F}", min);
+Console.WriteLine("Maximum score = {0:F}", min);
 Console.ReadKey();
-
