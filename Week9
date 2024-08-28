@@ -1,0 +1,145 @@
+Console.WriteLine("Input number for select café menu \nA.Café \nB.Milk \nC.Water : ");
+Console.WriteLine("===============================");
+char num = char.Parse(Console.ReadLine());
+Console.WriteLine("===============================");
+
+switch (num)
+{
+    case 'A': //if(num) == 'a' && || num == 'A')
+    case 'a':
+        Console.WriteLine("Café price = 45 THB");
+        break;
+    case 'B':
+    case 'b':
+        Console.WriteLine("Milk price = 20 THB");
+        break;
+    case 'C':
+    case 'c':
+        Console.WriteLine("Water price = 10 THB");
+        break;
+    default:
+        Console.WriteLine("Null");
+        break;
+}
+Console.WriteLine("===============================");
+Console.ReadKey();
+
+
+
+/////////////////
+
+
+
+int num1, num2, sum;
+char sym;
+Console.WriteLine("Entre votre N'1 : ");
+num1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Entre votre mot [+] [-] [*] [/]");
+sym = char.Parse(Console.ReadLine());
+Console.WriteLine("Entre votre N'2 : ");
+num2 = int.Parse(Console.ReadLine());
+Console.WriteLine("===============================");
+
+switch (sym)
+{
+    case '+':
+        sum = num1 + num2;
+        Console.WriteLine("{0} C'est vrai", sum);
+        break;
+    case '-':
+        sum = num1 - num2;
+        Console.WriteLine("{0} C'est vrai", sum);
+        break;
+    case '*':
+        sum = num1 * num2;
+        Console.WriteLine("{0} C'est vrai", sum);
+        break;
+    case '/':
+        sum = num1 / num2;
+        Console.WriteLine("{0} C'est vrai", sum);
+        break;
+    default:
+        Console.WriteLine("Error");
+        break;
+}
+Console.WriteLine("===============================");
+Console.ReadKey();
+
+
+
+////////
+
+
+
+for(int x = 1; x <= 10; x++)
+{
+    Console.WriteLine("x= {0}", x);
+
+}
+
+int xx = 1;
+while (xx <= 10)
+{ 
+    Console.WriteLine("xx = {0}", xx);
+    xx++;
+}
+
+
+
+
+Console.ReadKey();
+
+
+
+/////
+
+
+for(int x = 1 ; x <= 12; x++)
+{
+    Console.Write("x");
+    for(int y = 1 ; y <= 12 ; y++)
+    {
+        Console.Write("y");
+    }
+    Console.WriteLine();
+}
+Console.ReadKey();
+
+
+//////
+
+
+for (int x = 1; x < 10; x++)
+{
+    Console.Write(x);
+    for (int y = x+1; y <= 9; y++)
+    {
+        Console.Write(y);
+    }
+    Console.WriteLine();
+}
+
+Console.ReadKey();
+
+//////
+
+
+Console.Write("Input Price of Car : ");
+float priceCar = float.Parse(Console.ReadLine());
+Console.Write("Input Depreciation per year (%) : ");
+float dep = float.Parse(Console.ReadLine());
+Console.Write("Input how many year you want to see : ");
+float year = float.Parse(Console.ReadLine());
+
+Console.WriteLine("-----------------------------------------------------------------------");
+Console.WriteLine("Price of Car = {0:N} THB", priceCar);
+Console.WriteLine("-----------------------------------------------------------------------");
+
+for  (int x = 1; x<=year; x++)
+{
+    Console.WriteLine("After use {0} year : Reduce = {1:N} THB | Price = {2:N} THB",
+        x, priceCar * dep / 100, priceCar -= priceCar * dep / 100);
+
+}
+Console.WriteLine("-----------------------------------------------------------------------");
+Console.ReadKey();
