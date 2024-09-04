@@ -1,0 +1,50 @@
+using System;
+
+class SalesProgram
+{
+    static void Main()
+    {
+        // Get employee's name
+        Console.Write("Enter sales employee's name: ");
+        string employeeName = Console.ReadLine();
+
+        // Initialize variables
+        float totalSales = 0;
+        int dayCount = 0;
+        const int maxDays = 7;
+
+        // Loop to enter sales for up to 7 days
+        for (int i = 1; i <= maxDays; i++)
+        {
+            Console.Write($"Enter sales for day {i}: ");
+            float dailySales = float.Parse(Console.ReadLine());
+
+            totalSales += dailySales;
+            dayCount++;
+
+            if (i < maxDays)
+            {
+                Console.Write("Do you want to enter sales for another day? (y/n): ");
+                string response = Console.ReadLine().ToLower();
+
+                if (response != "y")
+                {
+                    break;
+                }
+            }
+        }
+
+        // Calculate average sales
+        float averageSales = totalSales / dayCount;
+
+        // Display the results
+        Console.WriteLine($"\n{employeeName}'s total sales: {totalSales} THB");
+        Console.WriteLine($"{employeeName}'s average daily sales: {averageSales:F5} THB");
+
+        // Check if the total sales exceeded the target
+        if (totalSales > 10000)
+        {
+            Console.WriteLine("Congratulations! You have exceeded the sales target!");
+        }
+    }
+}
